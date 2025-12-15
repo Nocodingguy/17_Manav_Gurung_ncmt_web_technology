@@ -1,1 +1,9 @@
-qn 1
+Group A : Short Questions
+1. Define the term "Protocol" in the contect of the internet?
+ans. In the context of the internet, a protocol is a satndarized set of rules that governs how data is formatted, transmitted and received acroos a network. WIthout this rules, computers would be unable to undersatnd the didgital signals they exchange.
+2. What is the primary difference between a Web Browser and a Search Engine?
+ans. A web Browser is the sofware you use to view the internet, while A search ENgine is a website/ service within the browser that helps you find information by indexing the web.for example :web brower(chrome,Firefox) and Search engine(Google,bing).
+3.  Define the World Wide Web (WWW).
+ans.World wide web (WWW) is a vast system of interconnected documents and resources, accessed via the internet, not the internet itself, using protocols like http and URLS to find and display information in web browers like chrome or Firefox.
+4. Distinguish between a static web page and a dynamic web page.
+ans. A static web page serves as a pre written, fixed content exactly as stored on the server whereas dynamic pages generate content in real-time based on user interaction or other factors.
