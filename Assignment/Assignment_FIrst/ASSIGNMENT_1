@@ -1,12 +1,42 @@
 Group A : Short Questions
 1. Define the term "Protocol" in the contect of the internet?
 ans. In the context of the internet, a protocol is a satndarized set of rules that governs how data is formatted, transmitted and received acroos a network. WIthout this rules, computers would be unable to undersatnd the didgital signals they exchange.
+
 2. What is the primary difference between a Web Browser and a Search Engine?
 ans. A web Browser is the sofware you use to view the internet, while A search ENgine is a website/ service within the browser that helps you find information by indexing the web.for example :web brower(chrome,Firefox) and Search engine(Google,bing).
+
 3.  Define the World Wide Web (WWW).
 ans.World wide web (WWW) is a vast system of interconnected documents and resources, accessed via the internet, not the internet itself, using protocols like http and URLS to find and display information in web browers like chrome or Firefox.
+
 4. Distinguish between a static web page and a dynamic web page.
 ans. A static web page serves as a pre written, fixed content exactly as stored on the server whereas dynamic pages generate content in real-time based on user interaction or other factors.
 
 Group B: LOng QUestions :
-5. Explain the client-server architecture of the web with a neat diagram
+5. Explain the client-server architecture of the web with a neat diagram.
+ans. CLient-server architecture is a fundamental concept in system design where a network involves multiple clients and server. Clients are devices or programs that request services or resources, while the server is a poerful machine providing these resources or services. This architecture allows effiecient data management and resource sharing, making it popular in web applications, databases, and other network-base systems. By separating roles and distributing tasks, client-server architecture enhances performance, sclability, and security.             
+Clent server architecture is a corner stone of mpodern system design, where the network infrastructure is structures to include multiple clients and a central server.Communication between clients and the server follows a request-response protocol, such as HTTP/HttPs for web services or SQL for database queries. This architecture allows for efficient data management and resource allocations by centralizing critical functions on the server, which can handle complex processing and large-scale data storage. Clients manage user interactions and send specific requests to the server, which processes these requests and sends back appropriate responses.
+
+6. Describe the functions of the following Internet services: Email, FTP, and VoIP.
+ans. Email (Electronic mail): Email is one of the most widely ised internet services for asyncronous communication. Its functions is to enavle users to send and rceive text-based messages, often including  attachments like documents, images, and other files, over the internet.
+
+FTP(File transfer PRotocol): FTP is a stnadard network protocol used for transfering computer files between a client and a server on a computer network.Its function is to upload ad download files efficiently and reliably.
+
+VOIP(Voice over Internt Protocol): VoIP is a technology that allows voice calls and multimedia sessions to be conducted over the INternet PRotocolnetworks, rather than the traditional public switched telephone network. Its function is to convert analog voices signals to digita; data packets and sending them over the intenet, allowing for phone calls using a broadband internet connection.
+
+7. ”The Internet is a network of networks.” Elaborate on this statement explaining how packet switching works.
+ans. "The internet is a networkof networks," becuse it is made up of millions of smaller networks such as home networks, school networks, company networks and ISP networks that are all interconnected using standard protocols like TCP/IP. These independent networks communicate with each other allow global data exchange.
+
+Packet swutching is the technique used to tansmit data over the internet. In packet switching, data is broken into small units packets. Each packet contains the destination address and is sent independently through the network. Routers choose the best avaial=vle path for each packet, and packets may travel through different routes. At the destination, the packets are reassembled in the correct order to reconstruct the original message. This method makes efficient use of network resources and allows reliable communication even if some path fails.
+
+Group C: Scenario-Based Question:
+8. A startup company wants to host a website that displays the same information to all visitors and requires very low maintenance costs. However, they are being advised to use a dynamic website. As a consultant, would you agree? Justify your answer.
+
+ans. As a consultant , I would not agree with the advice to use a dynamic website in this case. Since the satrtup website displays the same information ato all visitors and aims for very low maintenance cost, a static website is more suitable. A static website is built using HTML, CSS, & basic JAvaSCript, & the content remains the same for evry user. IT does not require a database or server-side processing, which redeuces hsoting costs, maintenance effort, and secuiryt risks. Static websites are also faster ot lod and easier to manaeg, making them ideal for sartups with limited resources. On the other hand, a dynamic website generates content in real time using real-time using server-side technologies & databases. THis increases development complexity, hosting cost,& maintenance requirements. Dynamic websites are useful only when content needs frequent updates or user interaction, which is not required in thsi scenario. Therefore, a staticc websites best fulfills the company needs & using a dynamic website would be necessary and inefficient.
+
+9.  A user types www.google.com into their browser, but the browser displays a ”Server NotFound” error, even though the internet connection is active. However, accessing the site via 142.250.190.46 works. Diagnose the problem and explain the under lying technology that failed.
+
+ans. The displayed "Server NotFound" is caused by a failure in DNS resolution. When a user types www.google.com, the broweser must translate this human-readable domain name into IP address. since accessing the website directly iusing the IP address 142.250.190.46 works, the internet conncetion & web server are functioning corectly. The Browser sends DNS query to a DNS server to resolve the domain name into its corresponding IP address. In this case, the DNS server is unreachable, misconfigured or failing to respond, resulting in the "Server NotFound" error. Because DNS resolutionfails the browser cannot locate the server using the domain name. When the IP address is enteref directly, DNS is bypassed, allowing the browser to connect to the server successfully. THerefore, the underlaying technology that failed is the Domain Name System which is responsible for mapping damain names to IP addresses.
+
+10.  A multinational corporation wants to share sensitive inventory data with specific suppliers but does not want this information available to the general public. Explain which network type (Intranet, Extranet, or Internet) they should implement and why.
+
+ans. Since, the corporation wants to share sensitive inventory data with number of suppliers but does not want the information avaiable to the genral public. THey should implement an Extranet. AN Extranet is a private network that allows controlled access to authorized external users, such as suppliers, partners, or vendors, using secure authentication mechanisms. AN extranet should be implemented becuase an Intranet is restricted to internal employees only and aould not allow suppliers to access the data. The Intenet, on the other hand, is public & would expose sensitive information to everyone, which is obviously unacceptable for confidentail business data. Therefore, An ectranet is the most appropriate network type because it enables secure, limited sharing of information with trusted externals parties while maintaning confidentaility and access control.
