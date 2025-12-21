@@ -1,0 +1,42 @@
+Chapter 2 : Website Development process
+
+Group A:
+1. Define the term ”Sitemap” in the planning phase.
+ans. THe term "Sitemap " is a file where you provide information about the pages, videos, and other files on your site, and the relationships between them. Search engines like google read this file to crawl your site more efficiently.
+
+2. What is the purpose of the ”Launch” phase in web development?
+ans. The prupose of launch phase in web development is to stratitegically deploy the finished website from a private staging environment to the live, public internet, making it accessible to users, while ensuring everything is optimized, secure, and ready for performance monitoring, acting as the crucial bridge from development to a live digital phase.
+
+3. Why is ”Documentation” important in the development lifecycle?
+ans. Documentation is important in the development lifectycle becuase it acts as a bridge between team members, ensurung everyone is on the same page.
+
+4. Differentiate between Front-end and Back-end development.
+ans. Difference between Front-end and back-end development is that Front-end development builds user-facing parts of website using html, css JavaScript where user sees ans touches or  interacts whereas Back-end development builds hidden lofic, databases, and infrastructures that poer the front-end, using languages like python, Java, Php etc.
+
+Group B: 
+
+5. ”Planning is the most critical phase of web development.” Discus this statement by listing the key activities performed during the planning phase.
+ans. Planning is the most critical phase of web developmenet because it the essentail groundwork or foundation for all subsequent activities, hwlping to align the final product with the project goals and business objectives. A well-executed planning phase mitigates common risks like scope creep, budget overruns and mis alignment of exceptation. 
+The key Activities performed during the plannign phase: 
+1. Sitemap creation:
+Developing a sitemap that outlines the main pages of the website and provides a visual representation of the overall structure.
+
+2. Wireframes: 
+Creating sketches of page layouts to show the placement of images, buttons, menus, and other design elements.
+
+3.  Selecting Technologies: 
+Choosing appropriate technologies such as HTML, CSS, JavaScript, and React for the frontend; Node.js, PHP, or Django for the backend; and MySQL or MongoDB for the database
+
+4. Content Strategy:
+Planning where each type of content will be placed across the website to ensure clarity and consistency.
+
+5. SEO Strategy
+Defining keywords, meta tags, URL structures, and ensuring mobile-friendliness to optimize search engine visibility.
+
+6. Resource Allocation:
+Assigning tasks to designers, developers, and content writers to streamline workflow and collaboration
+
+7. Timeline & Milestones:
+- Establishing deadlines for each stage of the project and setting milestones to track progress effectively.
+
+2.
