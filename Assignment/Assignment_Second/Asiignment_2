@@ -39,4 +39,10 @@ Assigning tasks to designers, developers, and content writers to streamline work
 7. Timeline & Milestones:
 - Establishing deadlines for each stage of the project and setting milestones to track progress effectively.
 
-2.
+6. Explain the iterative nature of the Maintenance phase. Why is a website never truly ”finished”?
+ans. Iterative nature of the maintenance phase is a continious loop of monitoring, updating, fixing, and improving a website after it goes live. Ones a website is developed developers refularly patches bugs, update contents, improve performance, fix security issues, and adjust features based on user feedback and analytics. Each change can create new requirements, whic sends you right back into another mini-cycle od analysis, design, and implementations. A website exists in a constantly changing environments. User exceptations ecolve, tecjnologies update, browser changes, security threats appear, and business goals shift. What worked last work will be outdated in future. So, a website is never truly finished until it doesnt get any funds.
+
+7.  Describe the process of ”Information Gathering.” Why is understanding the target audience crucial during this step?
+ans. Information Gathering is the first step in web development where requirements are collected before any design or coding begins. It involves identifying the purpose of the website, business goals, type of content, required features, technical constraints, budget, and timeline.This step includes client discussions, competitor analysis, user research, and studying existing systems. The goal is to clearly define what the website should do and why it exists, so later stages don’t turn into chaos disguised as creativity.
+
+The website is built for users, not for the developer’s ego. Knowing the target audience helps determine design style, content tone, navigation structure, accessibility needs, and functionality. Different users have different expectations, technical skills, and behaviors. If the audience isn’t understood, the website may look impressive but fail to be usable, relevant, or effective. In short, without audience understanding, you risk solving the wrong problem very efficiently.
