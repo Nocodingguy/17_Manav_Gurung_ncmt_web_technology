@@ -1,0 +1,49 @@
+Chapter 3 : Website Structucture designe
+Group_A:
+1. Define Information Architecture (IA).
+ans. Information Architecture is the practice of organizing, structuring, and labeling content in an effective and sustainable way to help users find information and complete tasks. It focuses on creating clear navigation systems, hierarchies, and relationships between different pieces of content.
+
+2. What is a ”Wireframe”?
+ans. A wireframe is a low-fidelity visual representation or blueprint of a digital product's layout and structure, showing where elements will be placed on a page or screen without detailed design elements. IT helps team align on structure and functionality, facilitate communication between designers, developers, and stake holders, and allow for quick iteratioons before investing time in detailed design work. 
+
+3. Explain the concept of ”Cognitive Friction” in web design.
+ans. Cognitive friction occurs when a user interacts with an interface that appears intuitive but delivers unexpected results, creating a mismatch between what they expect and what actually happens. Cognitive Friction damages user eperiernce because users rely on established conventions and mental models built from years of interacting with digital interfaces.
+
+4. Why should URL slugs use hyphens instead of underscores?
+ans. URL slugs should use hyphens instead of underscores because search engines, particularly Google, treat hyphens as word separators, making it easier for them to understand and index the individual words in a URL.  In contrast, search engines do not recognize underscores as word separators, which can lead to confusion and misinterpretation of the words in the URL as a single entity.
+
+Group_B:
+
+5. Compare and contrast Hierarchical (Tree) structure and Linear (Sequential) structure.
+Give an example of when to use each.
+
+ans. Comparing Hierarchical tree and linear structure . They are :
+i. Organixation are organized in levels with parent-child realtionships in hierarchical tree structure. Whereas, in linear strucuture oraganixation is oraganixed in a single, step-by-step sequence.
+
+ii. Users can jump between levels like from main menu to subpages in hoerarchical while users must follow a fixed path from start to end in linear structure.
+
+iii. Flexibility in hierarchical structure is relatively high where users can exlpore multiple paths. Whereas in Linear structure the flexibility is low where users are limited to the predefined sequence.
+
+iv. Hierarchical structure are more suitable for websites with diverse content and linear structure are moere stable with iseal for guided process like installation wizard etc.
+
+
+6. Explain the ”Three-Click Rule” and its significance in User Experience (UX) design.
+
+ans. The Three-Click Rule is a UX design principle that suggests users should be able to find any information or complete any task on a website within three clicks from the homepage. This rule emphasizes efficiency and ease of navigation, aiming to reduce user effort and frustration. Significance of three click rule in user experience are : 
+
+i. Improves Usability: by limiting navigation steps , users can quickly access content, enhancing theire overall experience
+
+ii. Reduces Cognitive Load: fewer clicks mean less meantal effort, helping users focus on theier goals.
+
+iii. Increases Engagemnent: Users are less likely to abandon a site if they can find what they need quickly.
+
+7. ”Plan before you do.” Explain how tools like Card Sorting and Flowcharts help in planning
+a website’s structure.
+
+and. Tools like card sorting and Flowchart help plan a website's structure by enabling designers to organixe content and users journaeys in a systematic, user-center way.
+
+Card Sorting: 
+Card sorting helps in determing how users mentally grop and label content.In this tool , User sort physical or digital cards into categories that make sense to them. It helps ti reveal user expectations to navigatin, leading to intuitive information architecture.Example: In a travel website, card sorting might slow users except "Flights", "Hotels" eyc.
+
+Flowcahrt:
+Flowcharts are used to map out the user journey through a website or app by visualizing the steps users take to complete tasks, such as signing up or making a purchase. This helps identify potential pain points, redundant steps, or missing paths in the user experience. For example, a flowchart for an e-commerce site might illustrate the path from product selection to checkout, highlighting where users are likely to drop off.
