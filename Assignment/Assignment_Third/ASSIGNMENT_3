@@ -47,3 +47,47 @@ Card sorting helps in determing how users mentally grop and label content.In thi
 
 Flowcahrt:
 Flowcharts are used to map out the user journey through a website or app by visualizing the steps users take to complete tasks, such as signing up or making a purchase. This helps identify potential pain points, redundant steps, or missing paths in the user experience. For example, a flowchart for an e-commerce site might illustrate the path from product selection to checkout, highlighting where users are likely to drop off.
+
+CHapter_3:
+8. You are designing a website for a University. It has hundreds of pages (Admissions,
+Departments, Alumni, News). Which structural model would you choose? Draw a rough
+diagram and justify your choice.
+
+ans. In order to design a website for a University with hundreds of pages, I would choose a Hierarchical (tree) structure.
+
+Justification:
+i. Scalability: A hierarchical structure allows for easy expansion as new departments, programs, or resources are added without disrupting the overall organization.
+ii. Clear Navigation: Users can easily navigate through different levels of information, starting from broad categories (like Admissions, Departments) down to specific pages (like individual department details or news articles).
+iii. User-Centered: It aligns with how users typically seek information, allowing them to drill down into specific areas of interest.
+iv. Organized Content: It helps in categorizing the vast amount of content in a logical manner, making it easier for users to find what they are looking for.
+v. Example Diagram:
+
+                           [University Homepage]
+                                   /      |      \
+                          [Admissions] [Departments] [Alumni]
+                             /   \          /   |   \        /   \
+                   [Undergrad] [Grad] [Science] [Arts] [Engineering] [Events] [News]
+
+9. A user visits a website but leaves within 10 seconds because they cannot find the navigation
+menu, which is hidden behind a small icon on a desktop screen. Analyze this design failure
+using the ”KISS” (Keep It Simple) principle.
+
+ans. The design failure of hiding the navigation menu behind a small icon on a desktop screen can be analyzed using the KISS (Keep It Simple) principle as follows:
+i. Simplicity: The KISS principle emphasizes simplicity in design to enhance usability. By hiding the navigation menu, the design complicates the user experience, making it difficult for users to find essential navigation options quickly.
+ii. Visibility: A key aspect of the KISS principle is ensuring that important elements are easily visible and accessible. In this case, the navigation menu is not immediately visible, leading to confusion and frustration for users who expect to see navigation options upfront.
+iii. User Expectations: Users generally expect to find navigation menus prominently displayed on desktop screens. Hiding it behind a small icon goes against these expectations, resulting in cognitive friction and a negative user experience.
+iv. Efficiency: The KISS principle advocates for efficient design that allows users to accomplish their goals quickly. By making the navigation menu hard to find, the design fails to facilitate efficient navigation, leading to users abandoning the site prematurely.
+Overall, this design choice violates the KISS principle by introducing unnecessary complexity, reducing visibility, and failing to meet user expectations, ultimately resulting in a poor user experience.
+
+10. An e-commerce website has a URL structure like www.shop.com/prod?id=55&cat=9. Explain why this is bad for both users and Search Engines (SEO), and propose a better
+structure using Page Slugs.
+
+ans. The URL structure www.shop.com/prod?id=55&cat=9 is bad for both users and Search Engines (SEO) for several reasons:
+i. Readability: The URL is not user-friendly as it contains query parameters that are difficult to read and understand. Users may find it hard to remember or share such URLs.
+ii. SEO Impact: Search engines prefer clean and descriptive URLs that include relevant keywords. The current    URL does not provide any context about the content of the page, making it less likely to rank well in search results.
+iii. Lack of Keywords: The URL does not include any keywords that describe the product or category, which are important for SEO. Keywords in URLs can help improve search engine rankings and make it easier for users to find relevant content.
+A better URL structure using Page Slugs would be:   www.shop.com/products/category-name/product-name
+In this improved structure:
+i. Readability: The URL is more readable and user-friendly, making it easier for users to understand the content of the page.
+ii. SEO Benefits: The inclusion of relevant keywords (category-name and product-name) helps improve search engine rankings and makes the URL more descriptive.
+iii. Shareability: A clean and descriptive URL is easier to share and remember, enhancing the   overall user experience.    
