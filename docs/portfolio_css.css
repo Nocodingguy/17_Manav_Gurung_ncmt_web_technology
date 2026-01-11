@@ -22,12 +22,16 @@ body {
     border: 3px solid #ffffff;
 }
 
+
+
+
+
 /* side bar*/
 header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 260px;
+    width: 220px;
     height: 100vh;
     background: #000000;
     border-right: 1px solid #222;
@@ -39,12 +43,15 @@ header {
     padding: 2rem 1rem;
 }
 
+
 /* Name */
 header h1 {
     font-size: 1.6rem;
     margin-top: 1rem;
     color: #ffffff;
 }
+
+
 
 /* nav */
 nav ul {
@@ -162,6 +169,59 @@ article:hover {
 
 #contact a:hover {
     text-decoration: underline;
+}
+
+#last-section {
+    background: #ffffff;
+    color: #111111;
+    margin: 2rem auto;
+    margin-left: 300px;
+    padding: 3rem;
+    border-radius: 12px;
+    max-width: 1200px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.6s ease-in;
+    text-align: center;
+}
+
+#last-section .animated-line {
+  font-family: 'Fantasy';
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #000000;            
+}
+#last-section .video-wrapper {
+    margin: 0;              
+    padding: 0;         
+    text-align: center;   
+}
+
+#last-section #background-video {
+    display: inline-block;
+    width: 30%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+
+#last-section .animated-line span {
+  opacity: 0;
+  display: inline-block;
+  animation: fadeInWord 0.6s forwards;
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeInWord {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* responsive */
