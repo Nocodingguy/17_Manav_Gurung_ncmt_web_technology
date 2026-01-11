@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e5e5e5;
+    background: #0d0d0d; /* black background */
+    min-height: 100vh;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile-pic {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    clip-path: circle(50% at 50% 50%);
+    border: 3px solid #ffffff;
+}
+
+/* ===== SIDEBAR ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: #000000;
+    border-right: 1px solid #222;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* NAME */
+header h1 {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    color: #ffffff;
+}
+
+/* ===== NAVIGATION ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-top: 3rem;
+    width: 100%;
+    align-items: center;
+}
+
+nav li {
+    width: 100%;
+}
+
+nav a {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #d1d1d1;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.25s ease;
+}
+
+nav a:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* ===== MAIN CONTENT ===== */
+section {
+    background: #ffffff;
+    color: #111111;
+    margin: 2rem auto;
+    margin-left: 300px;
+    padding: 3rem;
+    border-radius: 12px;
+    max-width: 1200px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.6s ease-in;
+}
+
+/* FADE IN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SECTION HEADINGS */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #000000;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.4rem;
+}
+
+/* ABOUT TEXT */
+#about p {
+    font-size: 1.1rem;
+    color: #333333;
+}
+
+/* PROJECT CARDS */
+article {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #f5f5f5;
+    border-left: 4px solid #000000;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+article:hover {
+    transform: translateX(6px);
+}
+
+/* SKILLS */
+#skills ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+#skills li {
+    padding: 1.2rem;
+    background: #ededed;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #111;
+}
+
+/* CONTACT */
+#contact p {
+    color: #333;
+}
+
+#contact a {
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    section {
+        margin-left: 0;
+        margin: 1rem;
+        padding: 2rem 1.5rem;
+    }
+}
