@@ -22,9 +22,35 @@ body {
     border: 3px solid #ffffff;
 }
 
+/* About me Css*/
+#about {
+  min-height: 80vh;
+  background-color: #000;
+}
 
+.about-bg {
+  min-height: 80vh;
+  background-image: url("backgorund-final.jpg");
+  background-size: cover;        
+  background-position: center; 
+  background-repeat: no-repeat;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  color: white;
+  text-align: center;
+  padding: 40px;
+
+  position: relative;
+}
+ .about-bg p *{
+    color:#ffffff;
+    font-size: 1.2rem;
+
+ }
 
 /* side bar*/
 header {
