@@ -4,99 +4,64 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
 /* body */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #e5e5e5;
-    background: #0d0d0d; /* black background */
+    background: #0d0d0d;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
-/* profile image */
-.profile-pic {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    clip-path: circle(50% at 50% 50%);
-    border: 3px solid #ffffff;
-}
 
-/* About me Css*/
-#about {
-  min-height: 80vh;
-  background-color: #000;
-}
 
-.about-bg {
-  min-height: 80vh;
-  background-image: url("backgorund-final.jpg");
-  background-size: cover;        
-  background-position: center; 
-  background-repeat: no-repeat;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  color: white;
-  text-align: center;
-  padding: 40px;
-
-  position: relative;
-}
- .about-bg p *{
-    color:#ffffff;
-    font-size: 1.2rem;
-
- }
-
-/* side bar*/
+/* changed to navbar  from sidebar*/
 header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 220px;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     background: #000000;
-    border-right: 1px solid #222;
+    border-bottom: 1px solid #222;
     z-index: 100;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    padding: 2rem 1rem;
+    justify-content: space-between;
+    padding: 1rem 2rem;
 }
-
 
 /* Name */
 header h1 {
     font-size: 1.6rem;
-    margin-top: 1rem;
+    margin: 0;
     color: #ffffff;
 }
-
-
 
 /* nav */
 nav ul {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.2rem;
-    margin-top: 3rem;
-    width: 100%;
+    margin: 0;
     align-items: center;
 }
 
 nav li {
-    width: 100%;
+    width: auto;
 }
 
 nav a {
     display: block;
-    width: 100%;
     padding: 0.8rem 1rem;
     text-align: center;
     text-decoration: none;
@@ -104,6 +69,7 @@ nav a {
     font-weight: 500;
     border-radius: 6px;
     transition: all 0.25s ease;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -111,17 +77,146 @@ nav a:hover {
     color: #000000;
 }
 
-/* main coontent */
-section {
+/* Page system */
+.page {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 2rem 2rem;
+}
+
+/* About Page */
+#about {
+    min-height: 100vh;
+    background-color: #000;
+    padding: 0;
+}
+
+.about-bg {
+    min-height: 100vh;
+    background-color:#0E1116 ; /* removed background image */
+    background-size: cover;        
+    background-position: center; 
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+    padding: 40px;
+
+    position: relative;
+}
+
+.about-bg p {
+    color:#ffffff !important;
+    font-size: 1.2rem;
+}
+/* profile image */
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    clip-path: circle(50% at 50% 50%);
+    border: 3px solid #ffffff;
+}
+
+/* Projects Page */
+#projects {
+    min-height: 80vh;
     background: #ffffff;
     color: #111111;
-    margin: 2rem auto;
-    margin-left: 300px;
-    padding: 3rem;
-    border-radius: 12px;
+}
+
+#projects .page-content {
     max-width: 1200px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-    animation: fadeIn 0.6s ease-in;
+    width: 100%;
+    padding: 3rem;
+}
+
+#projects h2 {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+/* Skills Page */
+#skills {
+    min-height: 80vh;
+    background: #0d0d0d;
+    color: #ffffff;
+}
+
+#skills .page-content {
+    max-width: 1200px;
+    width: 100%;
+    padding: 3rem;
+}
+
+#skills h2 {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+#skills li {
+    background: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333;
+}
+
+/* Contact Page */
+#contact {
+    min-height: 30vh;
+    background: #ffffff;
+    color: #111111;
+}
+
+#contact .page-content {
+    max-width: 1200px;
+    width: 100%;
+    padding: 3rem;
+}
+
+#contact h2 {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+#contact p {
+    color: #333333;
+}
+
+#contact a {
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Last Section Page */
+#last-section {
+    min-height: 80vh;
+    background: #0d0d0d;
+    color: #ffffff;
+}
+
+#last-section .page-content {
+    max-width: 1200px;
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+}
+
+#last-section .animated-line {
+    color: #ffffff;
 }
 
 /* FADE IN */
@@ -136,12 +231,10 @@ section {
     }
 }
 
-/* SECTION HEADINGS */
-section h2 {
+/* HEADINGS */
+h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: #000000;
-    border-bottom: 2px solid #000;
     padding-bottom: 0.4rem;
 }
 
@@ -176,100 +269,101 @@ article:hover {
 
 #skills li {
     padding: 1.2rem;
-    background: #ededed;
     border-radius: 6px;
     font-weight: 500;
-    color: #111;
-}
-
-/* contact */
-#contact p {
-    color: #333;
-}
-
-#contact a {
-    color: #000000;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-#contact a:hover {
-    text-decoration: underline;
-}
-
-#last-section {
-    background: #ffffff;
-    color: #111111;
-    margin: 2rem auto;
-    margin-left: 300px;
-    padding: 3rem;
-    border-radius: 12px;
-    max-width: 1200px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
-    animation: fadeIn 0.6s ease-in;
-    text-align: center;
 }
 
 #last-section .animated-line {
-  font-family: 'Fantasy';
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #000000;            
+    font-family: 'Fantasy';
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff;
 }
+
+#skills li {
+    background: #1a1a1a;
+    color: #ffffff;
+    border: 1px solid #333;
+    padding: 1.2rem;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
 #last-section .video-wrapper {
-    margin: 0;              
-    padding: 0;         
-    text-align: center;   
+    margin: 0;
+    padding: 0;
+    margin-top: 100px;
+    text-align: center;
 }
 
 #last-section #background-video {
     display: inline-block;
-    width: 30%;
-    height: auto;
+    width: 25%;
+    height: 45%;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
-
-
-#last-section .animated-line span {
-  opacity: 0;
-  display: inline-block;
-  animation: fadeInWord 0.6s forwards;
+#last-section .animated-line{
+    text-align: center;
+    margin: 20px auto;
+    width: fit-content;
 }
 
-/* Keyframes for fade-in */
-@keyframes fadeInWord {
-  from {
+#last-section .animated-line span {
     opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    display: inline-block;
+    animation-name: fadeInWord;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeInWord {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* responsive */
 @media (max-width: 768px) {
     header {
-        position: relative;
-        width: 100%;
-        height: auto;
-        flex-direction: row;
-        justify-content: space-around;
         padding: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+        width: 100%;
+        text-align: center;
     }
 
     nav ul {
-        flex-direction: row;
-        gap: 1rem;
-        margin-top: 0;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
     }
 
-    section {
-        margin-left: 0;
+    nav a {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .page-content {
         margin: 1rem;
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.5rem !important;
+    }
+
+    .profile-pic {
+        width: 60px;
+        height: 60px;
     }
 }
