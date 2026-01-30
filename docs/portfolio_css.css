@@ -5,7 +5,7 @@
 }
 
 html {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     scroll-behavior: smooth;
 }
 
@@ -120,8 +120,8 @@ nav a:hover {
 }
 /* profile image */
 .profile-pic {
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     object-fit: cover;
     clip-path: circle(50% at 50% 50%);
     border: 3px solid #ffffff;
@@ -146,30 +146,122 @@ nav a:hover {
 }
 
 /* Skills Page */
-#skills {
-    min-height: 80vh;
-    background: #0d0d0d;
-    color: #ffffff;
+/* skills */
+.skills-grid {
+    display: grid;
+    gap: 2rem;
+    margin-top: 1.5rem;
 }
 
-#skills .page-content {
-    max-width: 1200px;
-    width: 100%;
-    padding: 3rem;
-}
-
-#skills h2 {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
-}
-
-#skills li {
+.skill-item {
     background: #1a1a1a;
-    color: #ffffff;
     border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
 }
 
-/* Contact Page */
+.skill-item:nth-child(1) { animation-delay: 0.1s; }
+.skill-item:nth-child(2) { animation-delay: 0.2s; }
+.skill-item:nth-child(3) { animation-delay: 0.3s; }
+.skill-item:nth-child(4) { animation-delay: 0.4s; }
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.skill-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.skill-percentage {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #888;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px;
+    background: #2a2a2a;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border-radius: 10px;
+    width: 0;
+    transition: width 1.5s ease;
+    position: relative;
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+    border-color: #667eea;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover .skill-progress {
+    background: linear-gradient(90deg, #764ba2, #667eea);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Different color for different skills */
+.skill-item[data-category="cloud"] .skill-progress {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.skill-item[data-category="ml"] .skill-progress {
+    background: linear-gradient(90deg, #f093fb, #f5576c);
+}
+
+.skill-item[data-category="programming"] .skill-progress {
+    background: linear-gradient(90deg, #43e97b, #38f9d7);
+}
+
+.skill-item[data-category="devops"] .skill-progress {
+    background: linear-gradient(90deg, #fa709a, #fee140);
+}
+
+.skill-item[data-category="visualization"] .skill-progress {
+    background: linear-gradient(90deg, #ff9a9e, #fad0c4);
+}
+
+
 #contact {
     min-height: 30vh;
     background: #ffffff;
@@ -304,7 +396,7 @@ article:hover {
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.4);
 }
-#last-section .animated-line{
+#last-section .animated-line{ /* added */
     text-align: center;
     margin: 20px auto;
     width: fit-content;
