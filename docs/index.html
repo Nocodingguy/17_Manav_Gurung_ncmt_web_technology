@@ -1,144 +1,321 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Manav Gurung</title>
-    <link rel="stylesheet" href="portfolio_css.css">
-    <script src="https://kit.fontawesome.com/823251166e.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Human.ai — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="portfolio_css.css"/>
+  <script src="https://kit.fontawesome.com/823251166e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
 
+  <canvas id="pixel-cursor" width="32" height="32"></canvas>
 
- <section id="about">
-  <div class="about-bg">
-    <div class="profile-pic">
-            <img src = "profilepic.jpg" alt="Manav Gurung" class="profile-pic"> 
+  <nav id="navbar">
+    <a href="#home" class="nav-logo">Manav<em>.ai</em></a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#archive">Archive</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" class="cv-pill">Download CV</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+
+    <div class="hero-top">
+      <div class="hero-headline">
+        <span>Solving</span>
+        <span class="italic-line">Problem</span>
+      </div>
+      <div class="hero-meta">
+        <div>Based in — Kathmandu</div>
+        <div>Open to work</div>
+        <div class="status-row"><span class="dot"></span> Available</div>
+      </div>
+    </div>
+
+    <div class="hero-body">
+      <div class="hero-image-col">
+        <div class="profile-frame">
+         <img src="profile.jpg" alt="Profile" style="width:100%; height:100%; object-fit:cover;"/>
+          <div class="profile-placeholder">
+            <div class="placeholder-icon">&#9651;</div>
+            <span>profile.jpg</span>
+          </div>
         </div>
-    <p>
-      I'm Manav, a technology-driven problem solver who turns complex systems into
-      clear, scalable workflows. I work across cloud platforms, machine learning
-      tools, and Figma to create intuitive, effective solutions.
-    </p>
+        <div class="hero-scroll-hint">scroll ↓</div>
+      </div>
+
+      <div class="hero-info-col">
+        <p class="hero-tag">— About Me</p>
+        <h2 class="hero-name">Hi, I'm<br/>Manav Gurung</h2>
+        <p class="hero-desc">
+          Second-year undergraduate obsessed with AI & ML. I live on the  
+          internet chasing the next big thing in tech — always learning,
+          always exploring, always one tab deeper than I should be.
+        </p>
+        <div class="hero-links">
+          <a href="#projects" class="btn-primary">View Projects →</a>
+          <a href="#contact" class="btn-ghost">Contact Me</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills">
+    <div class="section-label">
+      <span class="label-text">Skills &amp; Tools</span>
+    </div>
+    <div class="skills-grid">
+    <div class="skill-card reveal"><i class="fa-brands fa-python skill-icon"></i><div class="skill-name">Python</div></div>
+    <div class="skill-card reveal"><i class="fa-brands fa-js skill-icon"></i><div class="skill-name">JavaScript</div></div>
+    <div class="skill-card reveal"><i class="fa-brands fa-html5 skill-icon"></i><div class="skill-name">HTML / CSS</div></div>
+    <div class="skill-card reveal"><i class="fa-brands fa-git-alt skill-icon"></i><div class="skill-name">Git</div></div>
+    <div class="skill-card reveal"><i class="fa-brands fa-docker skill-icon"></i><div class="skill-name">Docker</div></div>
+    <div class="skill-card reveal"><i class="fa-brands fa-tailwind-css skill-icon"></i><div class="skill-name">Tailwind CSS</div></div>
+    <div class="skill-card reveal"><i class="fa-brands fa-openai skill-icon"></i><div class="skill-name">OpenAI</div></div>
+    <div class="skill-card reveal"><div class="skill-name">DataRobot and Monkeylearn</div></div>
+    <div class="skill-card reveal"><i class="fa-solid fa-bolt skill-icon"></i><div class="skill-name">FastAPI</div></div>
+     <div class="skill-card reveal"><i class="fa-brands fa-scikit-learn skill-icon"></i><div class="skill-name">Scikit-learn</div></div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects">
+    <div class="section-label">
+      <span class="label-text">Projects</span>
+    </div>
+
+    <div class="projects-outer">
+      <div class="projects-track" id="projectsTrack">
+
+        <div class="project-card reveal">
+          <div class="project-img-side">
+            <div class="project-img-placeholder">project-image.jpg</div>
+          </div>
+          <div class="project-info-side">
+            <span class="project-num">01</span>
+            <h3 class="project-title">Sentiment Analysis Web App</h3>
+            <p class="project-desc">A web app that detects whether any text is positive, negative
+             or neutral using NLP and HuggingFace transformers. Built this
+             to learn how pre-trained models work and how to deploy ML
+             models into a real usable interface.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">HuggingFace</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img-side">
+            <div class="project-img-placeholder">project-image.jpg</div>
+          </div>
+          <div class="project-info-side">
+            <span class="project-num">02</span>
+            <h3 class="project-title"> Image Classifier</h3>
+            <p class="project-desc"> A deep learning model that identifies and categorises images
+             with a drag-and-drop interface for live predictions. Learned
+             how CNNs work, how to train on custom datasets and handle
+             real-time inference.</p>
+            <div class="project-tags">A
+              <span class="tag">Python</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">Keras</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img-side">
+            <div class="project-img-placeholder">project-image.jpg</div>
+          </div>
+          <div class="project-info-side">
+            <span class="project-num">03</span>
+            <h3 class="project-title">Chat with a PDF</h3>
+            <p class="project-desc">A deep learning model that identifies and categorises images
+             with a drag-and-drop interface for live predictions. Learned
+             how CNNs work, how to train on custom datasets and handle
+             real-time inference.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">TensorFlow</span>
+                <span class="tag">Langchain</span>
+                <span class="tag">OpenAI</span>
+                <span class="tag">Faiss & Streamlit</span> 
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-img-side">
+            <div class="project-img-placeholder">project-image.jpg</div>
+          </div>
+          <div class="project-info-side">
+            <span class="project-num">04</span>
+            <h3 class="project-title">Stock Price Predictor</h3>
+            <p class="project-desc">An LSTM neural network trained on historical data to forecast
+             stock trends, visualised with interactive charts. Learned how
+             to work with time-series data, sequence models and data
+             preprocessing pipelines.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">PyTorch</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Plotly</span>
+              <span class="tag">Yahoo Finance API</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="scroll-controls">
+        <button class="arrow-btn" id="scrollLeft">&#8592;</button>
+        <span class="scroll-hint">drag or click arrows</span>
+        <button class="arrow-btn" id="scrollRight">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ARCHIVE ═══ -->
+  <section id="archive">
+    <div class="section-label">
+      <span class="label-text">Archive — Hobbies &amp; Interests</span>
+    </div>
+    <div class="gallery-wrap">
+  <div class="stack-group">
+    <div class="stack-card back-2"></div>
+    <div class="stack-card back-1"></div>
+    <div class="stack-card front">
+      <img src="photography.jpg" alt="Photography"/>
+      <div class="stack-label">Photography</div>
+    </div>
   </div>
-</section>
 
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <article>
-            <h3>INsight</h3>
-            <p>INsight is a frontend web application built using HTML, CSS, and JavaScript, designed to help users explore and navigate different parts of Kathmandu. The project features interactive maps, location highlights, and curated details about popular destinations, hotels, and essential services across the city.
-               Created with first-time visitors in mind, INsight simplifies city exploration by offering easy access to places to visit, hotel booking options, and helpful travel information all within a clean and intuitive interface.
-            </p> 
-        </article>
-        <article>
-            <h3>Smart Health Prediction System</h3>
-            <p>This project is a comprehensive health prediction system that leverages machine learning algorithms to analyze user-provided health data and predict potential health conditions. The system utilizes Python for backend development, incorporating libraries such as TensorFlow and Scikit-learn for model training and prediction.
-               The application features a user-friendly interface developed with HTML, CSS, and JavaScript, allowing users to input their health metrics easily. The system processes this data to provide insights and predictions regarding various health conditions, aiming to assist users in proactive health management.
-            </p>
-    </section>
-
-    <div id="skills" class="page">
-    <div class="page-content">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-item" data-category="cloud">
-                <div class="skill-header">
-                    <span class="skill-name">Cloud Platforms: AWS</span>
-                    <span class="skill-percentage">90%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-progress="90"></div>
-                </div>
-            </div>
-
-            <div class="skill-item" data-category="ml">
-                <div class="skill-header">
-                    <span class="skill-name">Machine Learning Tools: TensorFlow, PyTorch, Scikit-learn</span>
-                    <span class="skill-percentage">85%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-progress="85"></div>
-                </div>
-            </div>
-
-            <div class="skill-item" data-category="programming">
-                <div class="skill-header">
-                    <span class="skill-name">Programming Languages: Python, JavaScript, HTML/CSS</span>
-                    <span class="skill-percentage">95%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-progress="95"></div>
-                </div>
-            </div>
-
-            <div class="skill-item" data-category="devops">
-                <div class="skill-header">
-                    <span class="skill-name">DevOps & Containerization: Docker</span>
-                    <span class="skill-percentage">75%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-progress="75"></div>
-                </div>
-            </div>
-
-              <div class="skill-item" data-category="Visualization">
-                <div class="skill-header">
-                    <span class="skill-name">Data Visualization: Matplotlib, Seaborn</span>
-                    <span class="skill-percentage">80%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress" data-progress="80"></div>
-                </div>
-            </div>
-        </div>
+  <div class="stack-group">
+    <div class="stack-card back-2"></div>
+    <div class="stack-card back-1"></div>
+    <div class="stack-card front">
+      <img src="music1.jpg" alt="Music"/>
+      <div class="stack-label">Music</div>
     </div>
+  </div>
+
+  <div class="stack-group">
+    <div class="stack-card back-2"></div>
+    <div class="stack-card back-1"></div>
+    <div class="stack-card front">
+      <img src="travel.jpg" alt="Travel"/>
+      <div class="stack-label">Travel</div>
+    </div>
+  </div>
+
+  <div class="stack-group">
+    <div class="stack-card back-2"></div>
+    <div class="stack-card back-1"></div>
+    <div class="stack-card front">
+      <img src="reading.jpg" alt="Reading"/>
+      <div class="stack-label">Reading</div>
+    </div>
+  </div>
+
+  <div class="stack-group">
+    <div class="stack-card back-2"></div>
+    <div class="stack-card back-1"></div>
+    <div class="stack-card front">
+      <img src="gaming.jpg" alt="Gaming"/>
+      <div class="stack-label">Gaming</div>
+    </div>
+  </div>
+
+  <div class="stack-group">
+    <div class="stack-card back-2"></div>
+    <div class="stack-card back-1"></div>
+    <div class="stack-card front">
+      <img src="running.jpg" alt="Running"/>
+      <div class="stack-label">Running</div>
+    </div>
+  </div>
 </div>
+    </div>
+  </section>
 
-
-<section id="last-section">
-
-    <div class="video-wrapper">
-        <video autoplay muted loop id="background-video">
-            <source src="lastsectionvideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact">
+    <div class="section-label">
+      <span class="label-text">Contact</span>
     </div>
 
-    <p class="animated-line">
-        <span style="animation-delay:0s">Turning</span>
-        <span style="animation-delay:0.5s">ambitions</span>
-        <span style="animation-delay:1s">into</span>
-        <br>
-        <span style="animation-delay:1.5s">beautifully</span>
-        <span style="animation-delay:2s">crafted</span>
-        <span style="animation-delay:2.5s">realities.</span>
-    </p>
+    <div class="contact-grid">
 
-</section>
- <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: grgmanav69@gmail.com</p>
-        <p>Github: <a href="https://github.com/Nocodingguy">Nocodingguy</a></p>
-        <p>Instagram: <i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com/_console_error_my_brain/">Manav Gurung</a></p>
-        <p>Kaggle: <i class="fa-brands fa-kaggle"></i> <a href="https://www.kaggle.com/gurungmanav">Manav Gurung</a></p>
+      <div class="contact-form-col">
+        <h3 class="contact-heading">Send a Message</h3>
+        <form id="contactForm">
+          <div class="field-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="John Doe" required />
+          </div>
+          <div class="field-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="john@example.com" required />
+          </div>
+          <div class="field-group">
+            <label>Subject</label>
+            <input type="text" placeholder="What's this about?" />
+          </div>
+          <div class="field-group">
+            <label>Message</label>
+            <textarea placeholder="Write your message here..."></textarea>
+          </div>
+          <button type="submit" class="send-btn" id="sendBtn">Send Message →</button>
+        </form>
+      </div>
 
-    </section>
+      <div class="contact-info-col">
+        <h3 class="contact-heading">Get In Touch</h3>
+        <div class="info-list">
+          <div class="info-item">
+            <div class="info-label">📞 Phone</div>
+            <div class="info-value">9807459082</div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">📧 Email</div>
+            <div class="info-value"><a href="mailto:grgmanav69@email.com">grgmanav69@email.com</a></div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">💼 LinkedIn</div>
+            <div class="info-value"><a href="https://www.linkedin.com/in/gurung-manav-6969b932a/">linkedin.com/in/manav-gurung</a></div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">🐙 GitHub</div>
+            <div class="info-value"><a href="https://github.com/Nocodingguy">github.com/Nocodingguy</a></div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">🐦 Kaggle</div>
+            <div class="info-value"><a href="https://www.kaggle.com/manavgurung">kaggle.com/manavgurung</a></div>
+          </div>
+          <div class="info-item">
+            <div class="info-label">📍 Location</div>
+            <div class="info-value">Kathmandu, Nepal</div>
+          </div>
+        </div>
+      </div>
 
- <script src="progressbar.js"></script>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Human.ai</span>
+    <span>Designed &amp; Built by Manav Gurung</span>
+  </footer>
+
+  <script src="portfolio.js"></script>
 </body>
 </html>
