@@ -177,3 +177,17 @@ window.addEventListener('scroll', () => {
     navbar.style.boxShadow = 'none';
   }
 });
+
+
+/* animation for archive which helps users swap to back card using cycle method*/
+ document.querySelectorAll('.stack-group').forEach(group => {
+  group.addEventListener('click', () => {
+    const front = group.querySelector('.front');
+    const back1 = group.querySelector('.back-1');
+    const back2 = group.querySelector('.back-2');
+
+    front.classList.replace('front', 'back-2');
+    back1.classList.replace('back-1', 'front');
+    back2.classList.replace('back-2', 'back-1');
+  });
+});
