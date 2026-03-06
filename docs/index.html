@@ -33,14 +33,14 @@
       <div class="hero-meta">
         <div>Based in — Kathmandu</div>
         <div>Open to work</div>
-        <div class="status-row"><span class="dot"></span> Available</div>
+        <div class="status-row"><span class="status-dot"></span> Available</div>
       </div>
     </div>
 
     <div class="hero-body">
       <div class="hero-image-col">
         <div class="profile-frame">
-         <img src= "/LIBRARY/html_images/profile.jpg" alt="Profile" style="width:100%; height:100%; object-fit:cover;"/>
+         <img src= "LIBRARY/html_images/profile.jpg" alt="Profile" style="width:100%; height:100%; object-fit:cover;"/>
           <div class="profile-placeholder">
             <div class="placeholder-icon">&#9651;</div>
             <span>profile.jpg</span>
@@ -86,103 +86,144 @@
   </section>
 
   <!-- ═══ PROJECTS ═══ -->
-  <section id="projects">
-    <div class="section-label">
-      <span class="label-text">Projects</span>
-    </div>
 
-    <div class="projects-outer">
-      <div class="projects-track" id="projectsTrack">
+<section id="projects">
 
-        <div class="project-card reveal">
-          <div class="project-img-side">
-            <div class="project-img-placeholder">project-image.jpg</div>
-          </div>
-          <div class="project-info-side">
-            <span class="project-num">01</span>
+  <div class="section-label">
+    <span class="label-text">Projects</span>
+  </div>
+
+  <!-- Progress bar -->
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
+
+  <div class="projects-outer">
+    <div class="projects-track" id="projectsTrack">
+
+      <!-- Card 01 -->
+      <div class="project-card active">
+        <div class="project-img-side">
+          <div class="project-img-placeholder">project-image.jpg</div>
+        </div>
+        <div class="project-info-side">
+          <div class="project-header">
             <h3 class="project-title">Sentiment Analysis Web App</h3>
-            <p class="project-desc">A web app that detects whether any text is positive, negative
-             or neutral using NLP and HuggingFace transformers. Built this
-             to learn how pre-trained models work and how to deploy ML
-             models into a real usable interface.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Flask</span>
-              <span class="tag">HuggingFace</span>
-            </div>
+            <span class="project-num">01 / 04</span>
+          </div>
+          <p class="project-desc">A web application that analyses any piece of text and classifies it 
+as positive, negative or neutral using natural language processing. 
+Powered by a pre-trained HuggingFace transformer model served through 
+a Flask backend, the app processes input in real time and returns a 
+confidence score alongside the prediction. Built to understand how 
+large pre-trained models work under the hood and how to wrap them 
+into a usable, deployable web interface.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Flask</span>
+            <span class="tag">HuggingFace</span>
           </div>
         </div>
-
-        <div class="project-card reveal">
-          <div class="project-img-side">
-            <div class="project-img-placeholder">project-image.jpg</div>
-          </div>
-          <div class="project-info-side">
-            <span class="project-num">02</span>
-            <h3 class="project-title"> Image Classifier</h3>
-            <p class="project-desc"> A deep learning model that identifies and categorises images
-             with a drag-and-drop interface for live predictions. Learned
-             how CNNs work, how to train on custom datasets and handle
-             real-time inference.</p>
-            <div class="project-tags">A
-              <span class="tag">Python</span>
-              <span class="tag">TensorFlow</span>
-              <span class="tag">Keras</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-img-side">
-            <div class="project-img-placeholder">project-image.jpg</div>
-          </div>
-          <div class="project-info-side">
-            <span class="project-num">03</span>
-            <h3 class="project-title">Chat with a PDF</h3>
-            <p class="project-desc">A deep learning model that identifies and categorises images
-             with a drag-and-drop interface for live predictions. Learned
-             how CNNs work, how to train on custom datasets and handle
-             real-time inference.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">TensorFlow</span>
-                <span class="tag">Langchain</span>
-                <span class="tag">OpenAI</span>
-                <span class="tag">Faiss & Streamlit</span> 
-            </div>
-          </div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-img-side">
-            <div class="project-img-placeholder">project-image.jpg</div>
-          </div>
-          <div class="project-info-side">
-            <span class="project-num">04</span>
-            <h3 class="project-title">Stock Price Predictor</h3>
-            <p class="project-desc">An LSTM neural network trained on historical data to forecast
-             stock trends, visualised with interactive charts. Learned how
-             to work with time-series data, sequence models and data
-             preprocessing pipelines.</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">PyTorch</span>
-              <span class="tag">Pandas</span>
-              <span class="tag">Plotly</span>
-              <span class="tag">Yahoo Finance API</span>
-            </div>
-          </div>
-        </div>
-
       </div>
 
-      <div class="scroll-controls">
-        <button class="arrow-btn" id="scrollLeft">&#8592;</button>
-        <span class="scroll-hint">drag or click arrows</span>
-        <button class="arrow-btn" id="scrollRight">&#8594;</button>
+      <!-- Card 02 -->
+      <div class="project-card">
+        <div class="project-img-side">
+          <div class="project-img-placeholder">project-image.jpg</div>
+        </div>
+        <div class="project-info-side">
+          <div class="project-header">
+            <h3 class="project-title">Image Classifier</h3>
+            <span class="project-num">02 / 04</span>
+          </div>
+          <p class="project-desc">A deep learning application that identifies and categorises images 
+across multiple classes using a convolutional neural network trained 
+on custom datasets. Features a drag-and-drop interface where users 
+can upload any image and receive an instant prediction with confidence 
+scores. Built with TensorFlow and Keras to gain hands-on experience 
+with CNN architectures, data augmentation, training pipelines and 
+serving a live model through a browser-based interface.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Keras</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 03 -->
+      <div class="project-card">
+        <div class="project-img-side">
+          <div class="project-img-placeholder">project-image.jpg</div>
+        </div>
+        <div class="project-info-side">
+          <div class="project-header">
+            <h3 class="project-title">Chat with a PDF</h3>
+            <span class="project-num">03 / 04</span>
+          </div>
+          <p class="project-desc">An intelligent document assistant that lets you upload any PDF and 
+have a full natural language conversation with its contents. Uses a 
+Retrieval-Augmented Generation pipeline where the document is chunked, 
+embedded into a FAISS vector store and retrieved contextually on each 
+query. OpenAI powers the conversational responses while Streamlit 
+provides the interface. Built to understand how RAG systems work and 
+how vector search enables LLMs to reason over private documents.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Langchain</span>
+            <span class="tag">OpenAI</span>
+            <span class="tag">Faiss</span>
+            <span class="tag">Streamlit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 04 -->
+      <div class="project-card">
+        <div class="project-img-side">
+          <div class="project-img-placeholder">project-image.jpg</div>
+        </div>
+        <div class="project-info-side">
+          <div class="project-header">
+            <h3 class="project-title">Stock Price Predictor</h3>
+            <span class="project-num">04 / 04</span>
+          </div>
+          <p class="project-desc">A time-series forecasting application that uses an LSTM neural network 
+trained on years of historical stock data to predict future price 
+trends. Pulls live data through the Yahoo Finance API, processes it 
+through a Pandas pipeline and visualises both historical and predicted 
+prices using interactive Plotly charts. Built to develop a strong 
+understanding of sequence modelling, data normalisation and the 
+challenges of working with financial time-series data in PyTorch.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Plotly</span>
+            <span class="tag">Yahoo Finance API</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /projects-track -->
+
+    <!-- Controls -->
+    <div class="scroll-controls">
+      <div class="controls-left">
+        <button class="arrow-btn" id="scrollLeft" aria-label="Previous project">&#8592;</button>
+        <button class="arrow-btn" id="scrollRight" aria-label="Next project">&#8594;</button>
+        <span class="scroll-hint">← → keys or arrows</span>
+      </div>
+      <div class="dots" id="dots">
+        <div class="dot active" data-i="0"></div>
+        <div class="dot" data-i="1"></div>
+        <div class="dot" data-i="2"></div>
+        <div class="dot" data-i="3"></div>
       </div>
     </div>
-  </section>
+
+  </div><!-- /projects-outer -->
+</section>
 
   <!-- ═══ ARCHIVE ═══ -->
 <section id="archive">

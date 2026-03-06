@@ -100,38 +100,79 @@ btnRight.addEventListener('click', () => {
 });
 
 
-/* 
-PROJECT CARD SCROLL — CLICK & DRAG
-   Lets the user click and drag the project track
-   horizontally on desktop like a touch device.
-   HOW IT WORKS:
-   - mousedown: records the starting X position and
-     saves the current scrollLeft value.
-   - mousemove: while the button is held, calculates
-     how far the mouse has moved and sets scrollLeft
-     accordingly (× 1.5 for a natural feel).
-   - mouseup / mouseleave: stops dragging.
-    */
-let isDragging   = false;
-let dragStartX   = 0;
-let dragScrollLeft = 0;
+/* ================================================
+   PROJECTS SECTION — 
+   ================================================ */
 
-track.addEventListener('mousedown', e => {
-  isDragging     = true;
-  dragStartX     = e.pageX - track.offsetLeft;
-  dragScrollLeft = track.scrollLeft;
-});
+(function () {
+  const cards   = document.querySelectorAll('.project-card');
+  const dots    = document.querySelectorAll('.dot');
+  const fill    = document.getElementById('progressFill');
+  const btnPrev = document.getElementById('scrollLeft');
+  const btnNext = document.getElementById('scrollRight');
 
-track.addEventListener('mouseleave', () => { isDragging = false; });
-track.addEventListener('mouseup',    () => { isDragging = false; });
+  let current = 0;
+  const total = cards.length;
 
-track.addEventListener('mousemove', e => {
-  if (!isDragging) return;
-  e.preventDefault();
-  const x    = e.pageX - track.offsetLeft;
-  const dist = (x - dragStartX) * 1.5;  // 1.5× multiplier = natural feel
-  track.scrollLeft = dragScrollLeft - dist;
-});
+  /**
+   * Navigate to a specific card index.
+   * @param {number} index - Target card index
+   * @param {'left'|'right'} dir - Slide direction for animation
+   */
+  function goTo(index, dir = 'right') {
+    // Deactivate current card and dot
+    cards[current].classList.remove('active', 'slide-left');
+    dots[current].classList.remove('active');
+
+    // Wrap around
+    current = ((index % total) + total) % total;
+
+    // Activate new card with correct animation direction
+    cards[current].classList.remove('slide-left');
+    if (dir === 'left') cards[current].classList.add('slide-left');
+    cards[current].classList.add('active');
+
+    // Update dot
+    dots[current].classList.add('active');
+
+    // Update progress bar
+    fill.style.width = ((current + 1) / total * 100) + '%';
+  }
+
+  // ── Arrow buttons ──
+  btnNext.addEventListener('click', () => goTo(current + 1, 'right'));
+  btnPrev.addEventListener('click', () => goTo(current - 1, 'left'));
+
+  // ── Dot clicks ──
+  dots.forEach(dot => {
+    dot.addEventListener('click', () => {
+      const i = parseInt(dot.dataset.i, 10);
+      if (i !== current) goTo(i, i > current ? 'right' : 'left');
+    });
+  });
+
+  // ── Keyboard arrow keys ──
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') goTo(current + 1, 'right');
+    if (e.key === 'ArrowLeft')  goTo(current - 1, 'left');
+  });
+
+  // ── Touch / swipe support ──
+  let touchStartX = 0;
+  const track = document.getElementById('projectsTrack');
+
+  track.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      diff > 0 ? goTo(current + 1, 'right') : goTo(current - 1, 'left');
+    }
+  }, { passive: true });
+
+})();
 
 
 /*
