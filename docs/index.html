@@ -335,22 +335,22 @@ challenges of working with financial time-series data in PyTorch.</p>
 
       <div class="contact-form-col">
         <h3 class="contact-heading">Send a Message</h3>
-        <form id="contactForm">
+        <form id="contactForm" action="https://formspree.io/f/myknyzre" method="POST" class="contact-form">
           <div class="field-group">
             <label>Your Name</label>
-            <input type="text" placeholder="John Doe" required />
+            <input type="text" name="name" placeholder="John Doe" required />
           </div>
           <div class="field-group">
             <label>Email Address</label>
-            <input type="email" placeholder="john@example.com" required />
+            <input type="email" name="email" placeholder="john@example.com" required />
           </div>
           <div class="field-group">
             <label>Subject</label>
-            <input type="text" placeholder="What's this about?" />
+            <input type="text" name="subject" placeholder="What's this about?" />
           </div>
           <div class="field-group">
             <label>Message</label>
-            <textarea placeholder="Write your message here..."></textarea>
+            <textarea name="message" placeholder="Write your message here..."></textarea>
           </div>
           <button type="submit" class="send-btn" id="sendBtn">Send Message →</button>
         </form>

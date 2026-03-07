@@ -186,23 +186,37 @@ CONTACT FORM SUBMISSION FEEDBACK
 const form    = document.getElementById('contactForm');
 const sendBtn = document.getElementById('sendBtn');
 
-form.addEventListener('submit', e => {
-  e.preventDefault(); // stop page reload
+form.addEventListener('submit', async e => {
+  e.preventDefault();
 
-  // Show success state
-  sendBtn.textContent         = 'Message Sent ✓';
-  sendBtn.style.background    = '#2ecc71';
-  sendBtn.style.letterSpacing = '0.18em';
+  sendBtn.textContent = 'Sending...';
 
-  // Reset after 2.5 seconds
-  setTimeout(() => {
-    sendBtn.textContent         = 'Send Message →';
-    sendBtn.style.background    = '';
-    sendBtn.style.letterSpacing = '';
-    form.reset();
-  }, 2500);
+  const data = new FormData(form);
+  const res = await fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (res.ok) {
+    // Show success state
+    sendBtn.textContent         = 'Message Sent ✓';
+    sendBtn.style.background    = '#2ecc71';
+    sendBtn.style.letterSpacing = '0.18em';
+
+    // Reset after 2.5 seconds
+    setTimeout(() => {
+      sendBtn.textContent         = 'Send Message →';
+      sendBtn.style.background    = '';
+      sendBtn.style.letterSpacing = '';
+      form.reset();
+    }, 2500);
+
+  } else {
+    sendBtn.textContent = 'Failed — Try Again';
+    sendBtn.style.background = '#e74c3c';
+  }
 });
-
 
 /* NAVBAR SCROLL SHADOW
    Adds a subtle bottom shadow to the navbar when the
@@ -232,3 +246,4 @@ window.addEventListener('scroll', () => {
     back2.classList.replace('back-2', 'back-1');
   });
 });
+
