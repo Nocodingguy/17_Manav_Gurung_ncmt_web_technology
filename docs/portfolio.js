@@ -100,9 +100,7 @@ btnRight.addEventListener('click', () => {
 });
 
 
-/* ================================================
-   PROJECTS SECTION — 
-   ================================================ */
+/*PROJECTS SECTION */
 
 (function () {
   const cards   = document.querySelectorAll('.project-card');
@@ -116,8 +114,8 @@ btnRight.addEventListener('click', () => {
 
   /**
    * Navigate to a specific card index.
-   * @param {number} index - Target card index
-   * @param {'left'|'right'} dir - Slide direction for animation
+    @param {number} index - Target card index
+    @param {'left'|'right'} dir - Slide direction for animation
    */
   function goTo(index, dir = 'right') {
     // Deactivate current card and dot
